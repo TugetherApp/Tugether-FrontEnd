@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import '../css/dashboard.css';
 import tugetherLogo from '../images/tugether_logo.png';
 import tugetherText from '../images/tugether_logo.svg';
-import tugetherCircle from '../images/circle_logo.svg';
-import tugetherRectangle from '../images/rectangle_logo.svg';
 
 class DashBoard extends Component {
   constructor() {
@@ -22,8 +20,8 @@ class DashBoard extends Component {
     const rand = Math.floor(Math.random() * 1000);
     const newID = `${id}-${rand}`;
     return (
-      <div key={newID} className='m-t-1'>
-        <b>{user}</b> {curriculum}</div>
+      <tr key={newID} className='m-t-1'>
+        <td><b>{user}</b></td> <td className='p-l-1'>{curriculum}</td></tr>
     );
   }
 
@@ -36,10 +34,6 @@ class DashBoard extends Component {
             <div className='logo'>
               <img className='logoTugether' src={tugetherText} alt='Tugether Logo'/>
               <img className='logoSymbol' src={tugetherLogo} alt= 'Tugether Logo'/>
-              {/* <div className='logoContainer'>
-                <img className='logoCircle' src={tugetherCircle} alt= 'Tugether Logo'/>
-                <img className='logoRectangle' src={tugetherRectangle} alt= 'Tugether Logo'/>
-              </div> */}
             </div>
             <div className='menu'>
               <a href='#Home'>Dashboard</a>
@@ -49,7 +43,7 @@ class DashBoard extends Component {
           </nav>
         </header>
         <main>
-          <div className='container m-t'>
+          <div className='container m-t m-b-1'>
             <div className='flex-row'>
               <div className='flex-col'>
                 <div className='text-purple text-align-left'>
@@ -62,12 +56,13 @@ class DashBoard extends Component {
                   <div className='btn-purple m-t-1'>Leave a review</div>
                 </div>
               </div>
-              <div className='flex-col justify-center'>
+              <div className='flex-col justify-center m-t-1'>
                 <div className='purpleBox'>
-                  <div>Recent Partners</div>
-                  <div id='RecentPartners'>
+                  <h3>Recent Partners</h3>
+                  <div className='bottom-ruler m-b-1'></div>
+                  <table id='RecentPartners'>
                     {recentPartners.map(user => this.PopulateRecentPartners(user.id, user.userName, user.curriculum))}
-                  </div>
+                  </table>
                 </div>
               </div>
             </div>
