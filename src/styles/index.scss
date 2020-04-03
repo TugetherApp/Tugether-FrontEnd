@@ -10918,6 +10918,10 @@ $base-color: #4f0299;
   background-color: $base-color;
 }
 
+html {
+  font-family: "Roboto";
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;

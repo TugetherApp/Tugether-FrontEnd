@@ -1,9 +1,11 @@
 import React from "react";
+import "../../styles/Svgs.scss";
 
 export const Logo = () => {
   return (
     <div>
       <svg
+        className="logo"
         width="260"
         height="71"
         viewBox="0 0 260 71"
