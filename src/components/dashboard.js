@@ -31,10 +31,10 @@ class DashBoard extends Component {
       <div id='DashBoard'>
         <header>
           <nav className='container'>
-            <div className='logo'>
+            <a className='logo' href='#Home'>
               <img className='logoTugether' src={tugetherText} alt='Tugether Logo'/>
               <img className='logoSymbol' src={tugetherLogo} alt= 'Tugether Logo'/>
-            </div>
+            </a>
             <div className='menu'>
               <a href='#Home'>Dashboard</a>
               <a href='#Home'>Support</a>

@@ -3,6 +3,7 @@ header {
   color: #FFF;
 }
 
+header a { transition-duration: 0.5s; }
 header a:hover {
   transform: scale(1.05);
 }
@@ -44,19 +45,13 @@ h3{
   top: 10px;
 }
 
-.logoContainer {
-  display: inline-block;
-  position: relative;
-  margin-left: 18px;
-  top: -10px;
-}
-
-.logoSymbol { margin-left: 10px; width: 60px;}
+.logoSymbol { margin-left: 6px; width: 60px;}
 
 
 main {
    font-size: 1.5em; 
-  }
+}
+
 .left-bar {
   max-width: 50%;
 }
@@ -111,6 +106,10 @@ main {
 
 /* Small devices (portrait tablets and large phones, 720px and below) */
 @media screen and (max-width: 720px) {
+  main {
+    font-size: 1em; 
+  }
+
   .container { max-width: calc(1600px + 10%); padding-left: 5%; padding-right: 5%; }
   
   .logoTugether{
@@ -119,9 +118,8 @@ main {
     height: 55px;
     top: 10px;
   }
-  .logoSymbol { margin-left: 10px; width: 40px;}
+  .logoSymbol { width: 40px;}
 
-  .logoContainer { margin-left: 6px; }
 
   .menu { display: none; }
 
