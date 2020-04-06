@@ -14,7 +14,10 @@ export const Menu = () => {
           </Link>
         </div>
         <div className="hidden sm:block text-xl">
-          <Link to="/how-it-works" className="text-white font-medium">
+          <Link
+            to="/how-it-works"
+            className="text-white font-medium hover:bg-white hover:text-purple-600"
+          >
             How it works
           </Link>
           <Link to="/support" className="text-white font-medium ml-20">
@@ -23,7 +26,7 @@ export const Menu = () => {
         </div>
         <div className="sm:hidden">
           <MobileMenu noOverlay right>
-            <Link to="/how-it-works" className="text-white font-medium">
+            <Link to="/how-it-works" className="text-white font-medium ">
               How it works
             </Link>
             <Link to="/support" className="text-white font-medium">
