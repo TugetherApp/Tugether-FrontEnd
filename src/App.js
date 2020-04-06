@@ -3,7 +3,7 @@ import { Menu } from "./components/Menu";
 import { HowItWorks } from "./components/HowItWorks";
 import { Support } from "./components/Support";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import DashBoard from './components/dashboard';
+import DashBoard from "./components/dashboard";
 
 export const App = () => {
   return (

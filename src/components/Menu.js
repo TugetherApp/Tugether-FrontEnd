@@ -14,26 +14,41 @@ export const Menu = () => {
           </Link>
         </div>
         <div className="hidden sm:block text-xl">
+          <Link to="/dashboard" className="text-white font-medium mr-10">
+            Dashboard
+          </Link>
           <Link
             to="/how-it-works"
-            className="text-white font-medium hover:bg-white hover:text-purple-600"
+            className="text-white font-medium hover:bg-white hover:text-purple-600 mr-10"
           >
             How it works
           </Link>
-          <Link to="/support" className="text-white font-medium ml-20">
+          <Link to="/support" className="text-white font-medium mr-10">
             Support
           </Link>
+          <Link to="/" className="text-white font-medium">
+            Logout
+          </Link>
         </div>
-        <div className="sm:hidden">
-          <MobileMenu noOverlay right>
-            <Link to="/how-it-works" className="text-white font-medium ">
-              How it works
+      </div>
+      <div className="sm:hidden">
+        <MobileMenu noOverlay right>
+          <div>
+            <Link to="/dashboard" className="text-white font-medium ">
+              Dashboard
             </Link>
-            <Link to="/support" className="text-white font-medium">
-              Support
-            </Link>
-          </MobileMenu>
-        </div>
+          </div>
+
+          <Link to="/how-it-works" className="text-white font-medium ">
+            How it works
+          </Link>
+          <Link to="/support" className="text-white font-medium">
+            Support
+          </Link>
+          <Link to="/support" className="text-white font-medium">
+            Logout
+          </Link>
+        </MobileMenu>
       </div>
     </div>
   );
