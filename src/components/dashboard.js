@@ -17,14 +17,14 @@ class DashBoard extends Component {
   }
 
   PopulateRecentPartners(id, user, curriculum) {
-    const rand = Math.floor(Math.random() * 1000);
-    const newID = `${id}-${rand}`;
+    const newID = uuidv4();
     return (
-      <tr key={newID} className="m-t-1">
+      <tr key={newID} className="mt-4">
         <td>
           <b>{user}</b>
-        </td>{" "}
-        <td className="p-l-1">{curriculum}</td>
+        </td>
+        <td className="pl-4">{curriculum}</td>
+
       </tr>
     );
   }
@@ -34,7 +34,7 @@ class DashBoard extends Component {
     return (
       <div id="DashBoard">
         <main>
-          <div className="container m-t mb-1">
+          <div className="container m-t mb-4">
             <div className="flex flex-row justify-between">
               <div className="flex flex-col justify-end">
                 <div className="text-purple text-align-left">
@@ -45,18 +45,18 @@ class DashBoard extends Component {
                 </div>
                 <div className="text-align-left m-t">
                   <Link to="/request_partner">
-                    {" "}
                     <div className="btn-purple">Request a partner</div>
                   </Link>
-                  <div className="btn-purple mt-6">See the curriculum</div>
-                  <div className="btn-purple mt-6">Leave a review</div>
+                  <div className="btn-purple mt-4">See the curriculum</div>
+                  <div className="btn-purple mt-4">Leave a review</div>
                 </div>
               </div>
-              <div className="flex flex-col justify-center mt-1">
+              <div className="flex flex-col justify-center mt-8">
                 <div className="purpleBox">
                   <h3 className="h3">Recent Partners</h3>
-                  <div className="bottom-ruler mb-1"></div>
+                  <div className="bottom-ruler mb-4"></div>
                   <table id="RecentPartners">
+                    <tbody>
                     {recentPartners.map(user =>
                       this.PopulateRecentPartners(
                         user.id,
@@ -64,6 +64,7 @@ class DashBoard extends Component {
                         user.curriculum
                       )
                     )}
+                    </tbody>
                   </table>
                 </div>
               </div>
