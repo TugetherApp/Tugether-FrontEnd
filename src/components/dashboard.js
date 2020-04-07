@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import "../css/dashboard.css";
+import "../styles/dashboard.css";
+import { Link } from "react-router-dom";
 
 class DashBoard extends Component {
   constructor() {
@@ -31,38 +32,44 @@ class DashBoard extends Component {
     const { recentPartners } = this.state;
     return (
       <div id="DashBoard">
-        <div className="container m-t m-b-1">
-          <div className="flex-row">
-            <div className="flex-col">
-              <div className="text-purple text-align-left">
-                <div className="font-large">
-                  Welcome, <b>{this.state.userName}</b>
+        <main>
+          <div className="container m-t mb-1">
+            <div className="flex flex-row justify-between">
+              <div className="flex flex-col justify-end">
+                <div className="text-purple text-align-left">
+                  <div className="font-large">
+                    Welcome, <b>{this.state.userName}</b>
+                  </div>
+                  <div>What would you like to do today?</div>
                 </div>
-                <div>What would you like to do today?</div>
+                <div className="text-align-left m-t">
+                  <Link to="/request_partner">
+                    {" "}
+                    <div className="btn-purple">Request a partner</div>
+                  </Link>
+                  <div className="btn-purple mt-6">See the curriculum</div>
+                  <div className="btn-purple mt-6">Leave a review</div>
+                </div>
               </div>
-              <div className="text-align-left m-t">
-                <div className="btn-purple">Request a partner</div>
-                <div className="btn-purple m-t-1">See the curriculum</div>
-                <div className="btn-purple m-t-1">Leave a review</div>
-              </div>
-            </div>
-            <div className="flex-col justify-center m-t-1">
-              <div className="purpleBox">
-                <h3>Recent Partners</h3>
-                <div className="bottom-ruler m-b-1"></div>
-                <table id="RecentPartners">
-                  {recentPartners.map(user =>
-                    this.PopulateRecentPartners(
-                      user.id,
-                      user.userName,
-                      user.curriculum
-                    )
-                  )}
-                </table>
+              <div className="flex flex-col justify-center mt-1">
+                <div className="purpleBox">
+                  <h3 className="h3">Recent Partners</h3>
+                  <div className="bottom-ruler mb-1"></div>
+                  <table id="RecentPartners">
+                    {recentPartners.map(user =>
+                      this.PopulateRecentPartners(
+                        user.id,
+                        user.userName,
+                        user.curriculum
+                      )
+                    )}
+                  </table>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </main>
+        <footer></footer>
       </div>
     );
   }
