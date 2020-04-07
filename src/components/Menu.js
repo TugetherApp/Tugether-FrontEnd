@@ -6,32 +6,34 @@ import { stack as MobileMenu } from "react-burger-menu";
 
 export const Menu = () => {
   return (
-    <div className="bg-base pt-4 pb-2">
-      <div className="ml-4 sm:ml-0 sm:flex sm:justify-around sm:items-center">
-        <div>
-          <Link to="/">
-            <Logo />
-          </Link>
-        </div>
-        <div className="hidden sm:block text-xl">
-          <Link to="/dashboard" className="text-white font-medium mr-10">
-            Dashboard
-          </Link>
-          <Link
-            to="/how-it-works"
-            className="text-white font-medium hover:bg-white hover:text-purple-600 mr-10"
-          >
-            How it works
-          </Link>
-          <Link to="/support" className="text-white font-medium mr-10">
-            Support
-          </Link>
-          <Link to="/" className="text-white font-medium">
-            Logout
-          </Link>
+    <div className="bg-base pt-4 pb-2 ">
+      <div className="lg:max-w-full lg:m-auto">
+        <div className="ml-4 sm:ml-0 sm:flex sm:justify-around sm:items-center">
+          <div>
+            <Link to="/">
+              <Logo />
+            </Link>
+          </div>
+          <div className="hidden md:block text-xl">
+            <Link to="/dashboard" className="text-white font-medium mr-10">
+              Dashboard
+            </Link>
+            <Link
+              to="/how-it-works"
+              className="text-white font-medium hover:bg-white hover:text-purple-600 mr-10"
+            >
+              How it works
+            </Link>
+            <Link to="/support" className="text-white font-medium mr-10">
+              Support
+            </Link>
+            <Link to="/" className="text-white font-medium">
+              Logout
+            </Link>
+          </div>
         </div>
       </div>
-      <div className="sm:hidden">
+      <div className="md:hidden">
         <MobileMenu noOverlay right>
           <div>
             <Link to="/dashboard" className="text-white font-medium ">
