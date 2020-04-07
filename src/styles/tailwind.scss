@@ -10,6 +10,10 @@ $base-color: #4f0299;
   background-color: $base-color;
 }
 
+.base-color {
+  color: $base-color;
+}
+
 html {
   font-family: "Roboto";
 }

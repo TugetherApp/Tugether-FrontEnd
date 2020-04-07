@@ -24,6 +24,7 @@ class DashBoard extends Component {
           <b>{user}</b>
         </td>
         <td className="pl-4">{curriculum}</td>
+
       </tr>
     );
   }
