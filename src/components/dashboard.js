@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import '../css/dashboard.css';
-import tugetherLogo from '../images/tugether_logo.png';
-import tugetherText from '../images/tugether_logo.svg';
+import '../styles/dashboard.css';
 
 class DashBoard extends Component {
   constructor() {
@@ -29,19 +27,6 @@ class DashBoard extends Component {
     const {recentPartners} = this.state;
     return (
       <div id='DashBoard'>
-        <header>
-          <nav className='container'>
-            <a className='logo' href='#Home'>
-              <img className='logoTugether' src={tugetherText} alt='Tugether Logo'/>
-              <img className='logoSymbol' src={tugetherLogo} alt= 'Tugether Logo'/>
-            </a>
-            <div className='menu'>
-              <a href='#Home'>Dashboard</a>
-              <a href='#Home'>Support</a>
-              <a href='#Home'>Logout</a>
-            </div>
-          </nav>
-        </header>
         <main>
           <div className='container m-t m-b-1'>
             <div className='flex-row'>
@@ -58,7 +43,7 @@ class DashBoard extends Component {
               </div>
               <div className='flex-col justify-center m-t-1'>
                 <div className='purpleBox'>
-                  <h3>Recent Partners</h3>
+                  <h3 className ='h3'>Recent Partners</h3>
                   <div className='bottom-ruler m-b-1'></div>
                   <table id='RecentPartners'>
                     {recentPartners.map(user => this.PopulateRecentPartners(user.id, user.userName, user.curriculum))}
